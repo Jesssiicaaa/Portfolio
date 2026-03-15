@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio — Computer Engineering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- PARTICLE BACKGROUND -->
+  <canvas id="particles"></canvas>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ── NAVIGATION ── -->
+  <nav>
+    <div class="nav-logo">MY<span>_</span>PORTFOLIO</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- Mobile menu toggle -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-content">
+      <div class="eyebrow">Computer Engineering · Toronto Metropolitan University</div>
+      <h1 class="hero-name">
+        <span class="line1">Building at the</span>
+        <span class="line2">Hardware–Software</span>
+        <span class="line3">Boundary</span>
+      </h1>
+      <p class="hero-typing">
+        I engineer&nbsp;<span class="typing-text" id="typingTarget"></span><span class="typing-cursor"></span>
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+
+    <!-- PHOTO: uncomment <img> and replace YOUR_PHOTO_URL with your image path -->
+    <div class="hero-photo-wrap">
+      <div class="angled-photo">
+        <img src="Headshot.jpg" alt="Profile photo" /> 
+        <div class="photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+      </div>
+      <div class="stat-pill bottom-left">
+        <div class="pill-num">10+</div>
+        <div class="pill-lbl">Projects Built</div>
+      </div>
+      <div class="stat-pill top-right">
+        <div class="pill-num">2027</div>
+        <div class="pill-lbl">Graduating</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line"></div>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="section-inner">
+      <p class="section-label reveal">// Who I Am</p>
+      <h2 class="section-title reveal reveal-delay-1">Analytical. Embedded.<br/>Always Building.</h2>
+      <div class="about-grid">
+        <div class="about-text reveal reveal-delay-2">
+          <p>I'm a <strong>Computer Engineering student</strong> at Toronto Metropolitan University with a deep passion for the intersection of hardware and software. From programming microcontrollers at the register level to building full-stack web platforms, I thrive across the entire engineering stack.</p>
+          <p>My work spans <strong>embedded firmware, FPGA design, robotics middleware, AI-powered tools, and real-time systems</strong>. I approach every project with the same mindset: understand the system deeply, then build it right.</p>
+          <p>When I'm not writing firmware or simulating circuits, I'm contributing to <strong>NSBE</strong>, exploring robotic hand mechanics at Tetra Bionics, or finding new ways AI and embedded systems intersect in the real world.</p>
+        </div>
+        <div class="stat-grid reveal reveal-delay-3">
+          <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Engineering Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Languages & HDLs</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">2027</div>
+            <div class="stat-label">Expected Graduation</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Curiosity Remaining</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line"></div>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="section-inner">
+      <p class="section-label reveal">// Capabilities</p>
+      <h2 class="section-title reveal reveal-delay-1">Technical Arsenal</h2>
+
+      <div class="skill-group reveal reveal-delay-1">
+        <p class="skill-group-label">— Programming Languages</p>
+        <div class="tags">
+          <span class="tag tag-i">C</span>
+          <span class="tag tag-i">C++</span>
+          <span class="tag tag-i">Python</span>
+          <span class="tag tag-i">Java</span>
+          <span class="tag tag-i">MATLAB</span>
+          <span class="tag tag-i">VHDL</span>
+          <span class="tag tag-i">Assembly (HCS12)</span>
+          <span class="tag tag-i">HTML / CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-2">
+        <p class="skill-group-label">— Embedded Systems & Robotics</p>
+        <div class="tags">
+          <span class="tag tag-s">Microcontrollers</span>
+          <span class="tag tag-s">Interrupts & Timers</span>
+          <span class="tag tag-s">Memory Mapped I/O</span>
+          <span class="tag tag-s">Firmware Dev</span>
+          <span class="tag tag-s">Sensor Integration</span>
+          <span class="tag tag-s">Raspberry Pi</span>
+          <span class="tag tag-s">Arduino</span>
+          <span class="tag tag-s">FPGA (DE1-SoC)</span>
+          <span class="tag tag-s">ESP32</span>
+          <span class="tag tag-s">ROS2</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-3">
+        <p class="skill-group-label">— Hardware & Design Tools</p>
+        <div class="tags">
+          <span class="tag tag-p">Quartus</span>
+          <span class="tag tag-p">Multisim</span>
+          <span class="tag tag-p">Altium Designer</span>
+          <span class="tag tag-p">Simulink</span>
+          <span class="tag tag-p">OnShape</span>
+          <span class="tag tag-p">SolidWorks</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-4">
+        <p class="skill-group-label">— Software, Data & Frameworks</p>
+        <div class="tags">
+          <span class="tag tag-pk">React</span>
+          <span class="tag tag-pk">Flask</span>
+          <span class="tag tag-pk">Firebase</span>
+          <span class="tag tag-pk">Power BI</span>
+          <span class="tag tag-pk">Tableau</span>
+          <span class="tag tag-pk">MySQL</span>
+          <span class="tag tag-pk">TensorFlow.js</span>
+          <span class="tag tag-pk">scikit-learn</span>
+          <span class="tag tag-pk">Git</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line"></div>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="section-inner">
+      <p class="section-label reveal">// What I've Built</p>
+      <h2 class="section-title reveal reveal-delay-1">Selected Projects</h2>
+
+      <!-- Featured tier -->
+      <div class="featured-label reveal reveal-delay-2">Featured — First Impression</div>
+      <div class="featured-grid">
+
+        <div class="featured-card featured-main reveal reveal-delay-1">
+          <div class="featured-top">
+            <span class="featured-icon">⚙️</span>
+            <div class="featured-badges">
+              <span class="card-badge b-team">Team</span>
+              <span class="card-badge b-sky">Full-Stack</span>
+            </div>
+          </div>
+          <h3 class="featured-title">Multi-Provider LLM Framework</h3>
+          <p class="featured-desc">Built a full-stack AI code review platform integrating GPT-4 with a Flask backend and Firebase database. Designed modular AI pipelines for logic, security, and test coverage analysis — surfacing feedback in real time via a React dashboard. Implemented multi-provider API routing to improve response accuracy and resilience.</p>
+          <div class="featured-footer">
+            <div class="featured-chips">
+              <span class="chip">Flask</span><span class="chip">React</span><span class="chip">Firebase</span><span class="chip">GPT-4</span><span class="chip">OpenAI API</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-card reveal reveal-delay-2">
+          <div class="featured-top">
+            <span class="featured-icon">🔒</span>
+            <div class="featured-badges"><span class="card-badge b-hack">Hackathon</span></div>
+          </div>
+          <h3 class="featured-title">TrancheGuard</h3>
+          <p class="featured-desc">Milestone-based escrow platform with role-separated donor, contractor, and auditor workflows. Built append-only audit trails, milestone gating, and XRPL blockchain escrow templates — addressing systemic funding opacity for underserved communities.</p>
+          <div class="featured-footer">
+            <div class="featured-chips">
+              <span class="chip">React</span><span class="chip">XRPL</span><span class="chip">Escrow Logic</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-card coming-soon reveal reveal-delay-3">
+          <div class="featured-top">
+            <span class="featured-icon">🔬</span>
+            <div class="featured-badges"><span class="card-badge b-acad">Academic</span></div>
+          </div>
+          <div class="coming-soon-badge">In Progress</div>
+          <h3 class="featured-title">VHDL CPU Design</h3>
+          <p class="featured-desc">Full custom CPU implementation in VHDL — ALU, register file, control unit, and instruction pipeline on DE1-SoC FPGA. Verified via waveform simulation in Quartus.</p>
+          <div class="progress-bar-wrap">
+            <div class="progress-label"><span>Build progress</span><span class="progress-pct">35%</span></div>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Standard grid -->
+      <div class="grid-label reveal">More Projects</div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal reveal-delay-1">
+          <div class="card-top"><span class="card-icon">🕹️</span><span class="card-badge b-solo">Solo</span></div>
+          <h3 class="card-title">Gesture Browser Game</h3>
+          <p class="card-desc">ML-powered game using TensorFlow.js pose estimation. Built full evaluation dashboard with confusion matrix, per-class precision/recall, and confidence visualizations.</p>
+          <div class="card-chips"><span class="chip">TensorFlow.js</span><span class="chip">JavaScript</span><span class="chip">Pose Estimation</span></div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2">
+          <div class="card-top"><span class="card-icon">🧠</span><span class="card-badge b-acad">Academic</span></div>
+          <h3 class="card-title">Robot Guidance Challenge</h3>
+          <p class="card-desc">Autonomous robot on the Freescale HCS12 microcontroller. Firmware handles motor control, collision detection, and real-time interrupt-driven obstacle avoidance.</p>
+          <div class="card-chips"><span class="chip">HCS12</span><span class="chip">Assembly</span><span class="chip">CodeWarrior</span><span class="chip">Embedded C</span></div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-3">
+          <div class="card-top"><span class="card-icon">⚡</span><span class="card-badge b-solo">Solo</span></div>
+          <h3 class="card-title">PCB Linear Power Supply</h3>
+          <p class="card-desc">Regulated DC linear power supply designed in Altium Designer with overvoltage protection, optimised ground planes, and trace stability.</p>
+          <div class="card-chips"><span class="chip">Altium Designer</span><span class="chip">PCB Layout</span><span class="chip">Analog Design</span></div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-1">
+          <div class="card-top"><span class="card-icon">📡</span><span class="card-badge b-solo">Solo</span></div>
+          <h3 class="card-title">ROS2 Publisher–Subscriber</h3>
+          <p class="card-desc">ROS2 nodes on Ubuntu simulating real-time distributed robotic communication — topic publishing, callback mechanisms, and inter-node middleware protocols.</p>
+          <div class="card-chips"><span class="chip">ROS2</span><span class="chip">Python</span><span class="chip">Ubuntu</span><span class="chip">Middleware</span></div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2">
+          <div class="card-top"><span class="card-icon">📊</span><span class="card-badge b-solo">Solo</span></div>
+          <h3 class="card-title">Sales Performance Dashboard</h3>
+          <p class="card-desc">Interactive dashboards visualizing 20 years of store sales data in Power BI and Tableau. Highlights long-term trends and KPIs for executive decision-making.</p>
+          <div class="card-chips"><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">SQL</span><span class="chip">Data Viz</span></div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-3">
+          <div class="card-top"><span class="card-icon">📚</span><span class="card-badge b-acad">Academic</span></div>
+          <h3 class="card-title">Java Bookstore Application</h3>
+          <p class="card-desc">Bookstore management app with State Design Pattern for customer loyalty management, transaction logging, and stock validation.</p>
+          <div class="card-chips"><span class="chip">Java</span><span class="chip">OOP</span><span class="chip">State Pattern</span><span class="chip">NetBeans</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line"></div>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience">
+    <div class="section-inner">
+      <p class="section-label reveal">// Journey</p>
+      <h2 class="section-title reveal reveal-delay-1">Education & Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-dot dot-pink"></div>
+          <div class="timeline-meta">Sept 2023 – Expected 2027</div>
+          <h3 class="timeline-title">Bachelor of Engineering — Computer Engineering</h3>
+          <div class="timeline-org">Toronto Metropolitan University · Toronto, ON</div>
+          <p class="timeline-desc">Relevant Courses: Digital Systems Design · Microprocessor Systems · Signals & Systems · Systems Programming · Object-Oriented Programming. Active in NSBE Programs Committee, Tetra Bionics Workshop, and Ignite Campus Club.</p>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot dot-indigo"></div>
+          <div class="timeline-meta">July 2024 – Nov 2024</div>
+          <h3 class="timeline-title">Food & Beverage Sales Associate</h3>
+          <div class="timeline-org">Canada's Wonderland · Vaughan, ON</div>
+          <p class="timeline-desc">Delivered efficient, friendly service to 500+ daily guests, handled POS transactions accurately, and strengthened communication and multitasking skills in a fast-paced environment.</p>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-3">
+          <div class="timeline-dot dot-sky"></div>
+          <div class="timeline-meta">Jan 2025 – Apr 2025</div>
+          <h3 class="timeline-title">Event Volunteer</h3>
+          <div class="timeline-org">Toronto Metropolitan University & Coldest Night of the Year Walk</div>
+          <p class="timeline-desc">Supported setup, scheduling, and logistics for large-scale capstone engineering exhibition and community charity events.</p>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-4">
+          <div class="timeline-dot dot-purple"></div>
+          <div class="timeline-meta">Sept 2022 – Jun 2023</div>
+          <h3 class="timeline-title">Peer Tutor — Science & Math</h3>
+          <div class="timeline-org">High School</div>
+          <p class="timeline-desc">Tutored peers in Calculus, Advanced Functions, and Science. Consistently improved student academic outcomes through clear explanation and patient mentorship.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line"></div>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="contact-inner">
+        <p class="section-label reveal">// Let's Connect</p>
+        <h2 class="section-title reveal reveal-delay-1">Open to Opportunities</h2>
+        <p class="contact-sub reveal reveal-delay-2">Actively seeking internships and co-ops in embedded systems, firmware engineering, or hardware–software integration. Let's build something together.</p>
+        <div class="contact-links reveal reveal-delay-3">
+
+          <a href="mailto:your.email@torontomu.ca" class="clink">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 8l9 6 9-6M3 8v10a1 1 0 001 1h16a1 1 0 001-1V8M3 8a1 1 0 011-1h16a1 1 0 011 1"/>
+            </svg>
+            Email
+          </a>
+
+          <a href="https://linkedin.com/in/yourprofile" class="clink" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+
+          <a href="https://github.com/yourusername" class="clink" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>Built with precision · <span>Computer Engineering</span> · Toronto Metropolitan University · © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
